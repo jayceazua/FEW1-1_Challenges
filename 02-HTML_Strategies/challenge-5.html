@@ -1,94 +1,115 @@
 <!--
 
- Challenge 4: You have been tasked to create a
- for that sets a users profile. It will allow
+ Challenge 5: You have been tasked to create a
+ form that sets a users profile. It will allow
  them to do the following:
 
  - Enter their User name (input text, should not autocomplete)
- - Email (input email)
- - Number of pets (input number)
- - Birthday (input date)
- - Choose an prefix (select)
- - Set a role (input type radio)
- - Show public profile (input checkbox, should be checked by default)
- - Enter a bio (textarea)
- - Upload a picture (input file, should only accept images)
- - Self Destruct (input checkbox, should be DISABLED by default since we haven't implemented this feature yet)
+ - Email (input email) - done
+ - Number of pets (input number) - done
+ - Birthday (input date) - done
+ - Choose an prefix (select) - done
+ - Set a role (input type radio) - done
+ - Show public profile (input checkbox, should be checked by default) - done
+ - Enter a bio (textarea) - done
+ - Upload a picture (input file, should only accept images) - done
+ - Self Destruct (input checkbox, should be DISABLED by default since we haven't implemented this feature yet) - done
 
  Your job is to:
- - Organize this better by adding tags
- - Add sensible placeholders
- - Connect labels to elements
+ - Organize this better by adding tags - done
+ - Add sensible placeholders - done
+ - Connect labels to elements - done
 
  The form must to send file data. Set the attributes on the form tag:
- - It must send a file wat are the required attributes for this?
+ - It must send a file wat are the required attributes for this? <- no idea what you are asking...
 
  Stretch Challenge: Use the pattern attribute to check the values in
  fields meet requirements. (you will need to have experience with
  regular expressions)
- - Name should not be empty.
- - Name should be at least 6 characters
- - Name should only contain letters and numbers
+ - Name should not be empty. - done
+ - Name should be at least 6 characters - done
+ - Name should only contain letters and numbers - done
 
  -->
-<h1>Burger <br> King</h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-
-<!doctype html>
-<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
 <body>
-  <form action="/your/api" method="">
+  <h3>Registration Form</h3>
+  <form class="" action="index.html" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <div>
+        <label>Prefix: </label>
+        <select name="prefix">
+          <option>Dude</option>
+          <option>None</option>
+          <option>Mr</option>
+          <option>Mrs</option>
+          <option>Ms</option>
+          <option>Sir</option>
+          <option>Madam</option>
+          <option>Dr</option>
+        </select>
+      </div>
 
-    <!-- use a p or other block tag to organize form elements onto lines -->
-    <p>
-      <label>Name</label>
-      <input name="name" type="text" placeholder="Your name">
+      <div class="">
+        <label>Name: </label>
+        <input name="name" min="6" placeholder="Enter name..." pattern="^[A-Za-z]\S*$" required>
+      </div>
 
-  </p>
+      <div class="">
+        <label for="email">Email: </label>
+        <input type="email" name="email" placeholder="Enter email...">
+      </div>
 
-    <label>Email</label>
-    <input name="email" type="email">
+      <div class="">
+        <label for="number">Number of pets: </label>
+        <input type="number">
+      </div>
 
-    <label>Pet Count</label>
-    <input name="pets">
+      <div class="">
+        <label for="bday">Birthday: </label>
+        <input type="date" name="bday">
+      </div>
 
-    <label>Birthday</label>
-    <input name="birthday">
+      <div class="">
+        <label for="picture">Upload Picture: </label>
+        <input type="file" name="picture" accept="image/x-png,image/gif,image/jpeg">
+      </div>
 
-    <select name="prefix">
-    <option>Mr</option>
-    <option>Mrs</option>
-    <option>Ms</option>
-    <option>Sir</option>
-    <option>Madam</option>
-    <option>Dr</option>
-    <option>None</option>
-  </select>
+      <div class="">
+        <label for="bio">Bio: </label>
+        <textarea name="bio" rows="10" cols="30"></textarea>
+      </div>
 
-    <!-- Associate labels with form elements with for and id -->
-    <input id="radio-admin" type="radio" name="role" value="Admin"/>
-    <label for="radio-admin">Admin</label>
+      <div class="">
+        <input id="radio-admin" type="radio" name="role" value="Admin" />
+        <label for="radio-admin">Admin: </label>
+        <input id="radio-editor" type="radio" name="role" value="Editor" />
+        <label for="radio-editor">Editor: </label>
+        <input id="radio-contributor" type="radio" name="role" value="Contributor" checked/>
+        <label for="radio-contributor">Contributor: </label>
+      </div>
 
-    <input type="radio" name="role" value="Editor" />
-    <label>Editor</label>
+      <div class="">
+        <label for="self-destruct">Self Destruct: </label>
+        <input name="self-destruct" type="checkbox" disabled>
+      </div>
 
-    <input type="radio" name="role" value="Contributor" />
-    <label>Contributor</label>
-
-    <input type="checkbox" name="public">
-    <label>Public Bio</label>
-
-    <textarea name="bio"></textarea>
-
-    <label>Upload Image</label>
-    <input name="image" type="file">
-
-    <label>Self Destruct</label>
-    <input name="self-destruct" type="check">
-
-    <button type="submit">Submit</button>
+      <div class="">
+        <label for="show-profile">Show Public Profile: </label>
+        <input type="checkbox" name="show-profile" checked>
+      </div>
+    </fieldset>
+    <button type="button" name="button">Submit</button>
   </form>
+
 </body>
 
 </html>
