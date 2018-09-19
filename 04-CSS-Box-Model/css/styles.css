@@ -1,0 +1,65 @@
+body, html {
+	/*align-content: center;*/
+	height: 400px;
+}
+
+.container {
+	max-width: 300px;
+	height: 100%;
+	margin: auto;
+	padding: 3rem 1rem 3rem 1rem;
+	background-color: gainsboro;
+	border-radius: 1rem;
+	border: 1px solid grey;
+}
+
+.title-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
+.result {
+	padding: 0 1rem 0 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: Helvetica;
+	font-size: 32px;
+}
+
+.input-label {
+	font-family: "Helvetica Neue";
+	font-size: 10px;
+	padding-bottom: 4px;
+}
+
+.input {
+	padding-top: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.total {
+	padding-bottom: 20px;
+}
+
+button {
+	margin-top: 5px;
+	text-align: center;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	font-size: large;
+	background-color: aquamarine;
+}
+
+input {
+	height: 50px;
+	border-radius: 4px;
+	border: 1px solid grey;
+	text-align: center;
+	font-size: 24px;
+}
