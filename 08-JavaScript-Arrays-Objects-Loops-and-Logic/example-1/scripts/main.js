@@ -1,13 +1,15 @@
 // Your scripts here
 const container = document.getElementById('container');
+let str = ''
 
-let displayAliens = () => {
-    let str = ''
-    for (var i = 0; i < data.length; i += 1) {
-      const alien = data[i];
-      const {name, image, power, rof, health} = alien;
-      console.log(alien);
-      str += `
+for (var i = 0; i < data.length; i += 1) {
+    str += htmlAlien(data[i])
+}
+
+
+function htmlAlien(obj){
+    const {name, image, power, rof, health} = obj;
+      return `
       <div class="alien-card">
         <img src="${image}" width="32" height="32">
         <h1>${name}</h1>
@@ -16,12 +18,10 @@ let displayAliens = () => {
         <div><span>Health: </span>${health}</div>
       </div>
         `;
-    }
-    return str
 }
 
 
-container.innerHTML = displayAliens();
+container.innerHTML = str;
 
 /*
 Challenges: Your goal is to display a catalog of Aliens.
