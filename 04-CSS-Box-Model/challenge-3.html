@@ -40,14 +40,37 @@
     <option>None</option>
   </select>
     </p>
+
+
+    <p>
+      <!-- Associate labels with form elements with for and id -->
+      <input id="upload" type="file" name="upload" value="Admin" />
+      <label class="upload-label" for="upload">Picture</label>
+
+      <style>
+        #upload {
+            display: none;
+        }
+        .upload-label {
+            border: 1px solid;
+            color: #fff;
+            background-color: #000;
+            padding: 1em;
+        }
+      </style>
+    </p>
+
+
     <p>
       <!-- Associate labels with form elements with for and id -->
       <input id="radio-admin" type="radio" name="role" value="Admin" />
       <label for="radio-admin">Admin</label>
     </p>
     <p>
-      <input type="radio" name="role" value="Editor" />
-      <label>Editor</label>
+        <label>
+          <input type="radio" name="role" value="Editor" />
+          Editor
+      </label>
     </p>
     <p>
       <input type="radio" name="role" value="Contributor" />
