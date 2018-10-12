@@ -3,14 +3,14 @@ const portClick = document.getElementById('portClick');
 const aboutClick = document.getElementById('aboutClick');
 
 portClick.onclick = (event) => {
-    openCity(event, 'Portfolio')
+    openContent(event, 'Portfolio')
 }
 
 aboutClick.onclick = (e) => {
-    openCity(event, 'About')
+    openContent(event, 'About')
 }
 
-function openCity(evt, elem) {
+function openContent(evt, elem) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {

@@ -13,13 +13,13 @@ body {
 /* Style the top navigation bar */
 
 /* Style the tab */
-.tab {
+.nav {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #333;
 }
 /* Style the buttons inside the tab */
-.tab a {
+.nav a {
     color: white;
     float: left;
     border: none;
@@ -34,12 +34,12 @@ body {
 	text-decoration: none;
 }
 /* Change background color of buttons on hover */
-.tab a:hover {
+.nav a:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab a.active {
+.nav a.active {
     background-color: #ccc;
 }
 
@@ -111,50 +111,6 @@ button:hover, a:hover {
     background-color: white;
     padding: 20px;
 }
-
-/* Fake image, just for this example */
-/* .fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
-} */
-
-
-/* Header/logo Title */
-/* Image */
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("brickell.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.img-comp-img {
-  position: absolute;
-  width: auto;
-  height: auto;
-  overflow:hidden;
-}
-
-.img-comp-img img {
-  display:block;
-  vertical-align:middle;
-}
-
-.img-comp-slider {
-  position: absolute;
-  z-index:9;
-  cursor: ew-resize;
-  /*set the appearance of the slider:*/
-  width: 40px;
-  height: 40px;
-  background-color: #2196F3;
-  opacity: 0.7;
-  border-radius: 50%;
-}
-
 
 /* Footer */
 .footer {
