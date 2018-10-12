@@ -56,13 +56,49 @@ body {
     flex-wrap: wrap;
 }
 
-/* Create two unequal columns that sits next to each other */
+
 /* Sidebar/left column */
 .side {
     -ms-flex: 30%; /* IE10 */
     flex: 30%;
     background-color: #f1f1f1;
     padding: 20px;
+}
+
+/* Card Profile */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover, a:hover {
+    opacity: 0.7;
 }
 
 /* Main column */
@@ -87,14 +123,14 @@ body {
     background: #ddd;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 700px) {
     .row {
         flex-direction: column;
     }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 400px) {
     .navbar a {
         float: none;
