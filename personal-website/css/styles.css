@@ -10,24 +10,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
-
-
-/* Header/logo Title */
-.header {
-    padding: 80px;
-    text-align: center;
-    background: #1abc9c;
-    color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-    font-size: 40px;
-}
-
-
-
-
 /* Style the top navigation bar */
 
 /* Style the tab */
@@ -131,11 +113,48 @@ button:hover, a:hover {
 }
 
 /* Fake image, just for this example */
-.fakeimg {
+/* .fakeimg {
     background-color: #aaa;
     width: 100%;
     padding: 20px;
+} */
+
+
+/* Header/logo Title */
+/* Image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("brickell.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+.img-comp-img img {
+  display:block;
+  vertical-align:middle;
+}
+
+.img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
 
 /* Footer */
 .footer {
