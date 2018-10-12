@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Jayce Azua</title>
     <!-- Load an icon library -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/styles.css">
-  </head>
-  <body>
+</head>
 
-      <div class="header">
+<body>
+
+    <div class="header">
         <h1>My Website</h1>
         <p>A website created by me.</p>
-      </div>
+    </div>
 
-      <div class="navbar">
-        <a href="#">PORTFOLIO</a>
-        <a href="#">ABOUT</a>
-        <a href="#">CONTACT</a>
-        <!-- <a href="#" class="right">Link</a> -->
-      </div>
+    <div class="navbar tab">
+          <a class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</a>
+          <a class="tablinks" onclick="openCity(event, 'About')">About</a>
+          <!-- <button class="tablinks" onclick="openCity(event, 'Portfolio')">Portfolio</button> -->
 
-      <div class="row">
+    </div>
+
+    <div class="row">
 
         <div class="side">
             <div class="card">
-              <img src="me.JPG" alt="Jayce Azua" style="width:100%">
-              <h1>Jayce Azua</h1>
-              <p class="title">Full Stack Engineer/ Data Science</p>
-              <p>University of Miami</p>
-              <a href="#"><i class="fa fa-medium"></i></a>
-              <a href="https://instagram.com/azua.jayce"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="https://github.com/jayceazua"><i class="fa fa-github"></i></a>
-              <p><button>Contact</button></p>
+                <img src="me.JPG" alt="Jayce Azua" style="width:100%">
+                <h1>Jayce Azua</h1>
+                <p class="title">Full Stack Engineer/ Data Science</p>
+                <p>University of Miami</p>
+                <a href="#"><i class="fa fa-medium"></i></a>
+                <a href="https://instagram.com/azua.jayce"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/jayceazua"><i class="fa fa-github"></i></a>
+                <p><button>Download resume</button></p>
             </div>
         </div>
 
 
 
         <div class="main">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Dec 7, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <div id="Portfolio" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
             <br>
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
-            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <div id="About" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div>
+            <!-- <br>
+            <div id="About" class="tabcontent">
+                <h3>London</h3>
+                <p>London is the capital city of England.</p>
+            </div> -->
         </div>
-      </div>
+    </div>
 
-      <div class="footer">
+    <div class="footer">
         <h2>© 2018 Copyright by Jayce Azua</h2>
-      </div>
-    <script type="text/javascript" src="/js/index.js"></script>
-  </body>
+    </div>
+    <script type="text/javascript">
+    function openCity(evt, elem) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(elem).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    </script>
+</body>
+
 </html>
